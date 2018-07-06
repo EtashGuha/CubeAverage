@@ -1,5 +1,6 @@
 package com.example.etash.averager;
 
+import android.graphics.Color;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
             long millis = System.currentTimeMillis() - startTime;
             timeOfSolve = millis;
             timerTextView.setText("Time: " + convertMillisToString(millis));
-            timerHandler.postDelayed(this, 100);
+            timerHandler.postDelayed(this, 10);
         }
     };
 
@@ -48,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         timer = findViewById(R.id.timer);
         timerTextView.setText("Time");
         timer.setText("Start");
+        timer.setBackgroundColor(Color.GREEN);
         hide();
         timer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -99,11 +101,13 @@ public class MainActivity extends AppCompatActivity {
             isTimerOn = false;
             timer.setText("Start");
             updateDisplayAndTimes();
+            timer.setBackgroundColor(Color.GREEN);
         } else {
             startTime = System.currentTimeMillis();
             timerHandler.postDelayed(timerRunnable,0);
             isTimerOn = true;
             timer.setText("Stop");
+            timer.setBackgroundColor(Color.RED);
         }
     }
 

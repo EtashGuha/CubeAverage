@@ -16,7 +16,8 @@
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/SecondTime"
@@ -27,7 +28,8 @@
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FirstTime" />
+        app:layout_constraintTop_toBottomOf="@+id/FirstTime"
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/ThirdTime"
@@ -38,7 +40,8 @@
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SecondTime" />
+        app:layout_constraintTop_toBottomOf="@+id/SecondTime"
+        android:textSize="20sp"/>
 
     <TextView
         android:id="@+id/FourthTime"
@@ -47,37 +50,11 @@
         android:layout_marginEnd="163dp"
         android:layout_marginStart="163dp"
         android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/FifthTime"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ThirdTime" />
-
-    <TextView
-        android:id="@+id/BestAverage"
-        android:layout_width="wrap_content"
-        android:layout_height="16dp"
-        android:layout_marginStart="163dp"
-        android:layout_marginEnd="163dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginRight="163dp"
-        android:layout_marginLeft="163dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/FifthTime" />
-
-    <TextView
-        android:id="@+id/WorstAverage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="163dp"
-        android:layout_marginRight="163dp"
-        android:layout_marginLeft="163dp"
-        android:layout_marginStart="163dp"
-        android:layout_marginTop="0dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/BestAverage" />
 
     <TextView
         android:id="@+id/FifthTime"
@@ -86,25 +63,23 @@
         android:layout_marginEnd="163dp"
         android:layout_marginStart="163dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/BestAverage"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/FourthTime" />
 
     <Button
         android:id="@+id/timer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="269dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginStart="148dp"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#00e600"
         android:text="Button"
+        android:textSize="90sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/FinalAverage"
+        android:id="@+id/TimerTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="163dp"
@@ -112,19 +87,45 @@
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/timer"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="40sp"/>
 
     <TextView
-        android:id="@+id/TimerTextView"
+        android:id="@+id/BestAverage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="250dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginStart="163dp"
+        android:layout_marginTop="15dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FifthTime"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/WorstAverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="163dp"
         android:layout_marginStart="163dp"
         android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/timer" />
+        app:layout_constraintTop_toBottomOf="@+id/BestAverage"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/FinalAverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/TimerTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="233dp" />
+
 
 </android.support.constraint.ConstraintLayout>
