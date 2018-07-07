@@ -62,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
     public long calculateBestAverage(){
         for(int i = 0; i<4; i++){
             tempTimes[i] = times[i];
@@ -81,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
 
     public long calculateFinalAverage(){
         Arrays.sort(times);
-        return (tempTimes[1] + tempTimes[2] + tempTimes[3])/((long)(3.0));
+        return (times[1] + times[2] + times[3])/((long)(3.0));
     }
 
     public void hide() {
@@ -135,6 +134,7 @@ public class MainActivity extends AppCompatActivity {
         } else if(solveNumber == 4) {
             fifthTime.setText("Fifth " + timerTextView.getText());
             fifthTime.setVisibility(View.VISIBLE);
+            times[4] = timeOfSolve;
             finalAverage.setText("Final Average: " + convertMillisToString(calculateFinalAverage()));
             finalAverage.setVisibility(View.VISIBLE);
         }
