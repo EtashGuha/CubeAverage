@@ -1,4 +1,4 @@
-package com.example.etash.averager;
+package com.my.etash.averager;
 
 import android.graphics.Color;
 import android.os.Handler;

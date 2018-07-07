@@ -1,4 +1,4 @@
-package com.example.etash.averager;
+package com.my.etash.averager;
 
 import org.junit.Test;
 
